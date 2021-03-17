@@ -108,7 +108,6 @@ function Main(){
            <br/>
            PROJECTS
            {projects.map((pro)=>{
-               const{name,link,description} = pro
                return(
                    <Project key={pro.key} pro={pro}/>
                )
