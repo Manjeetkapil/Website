@@ -21,6 +21,30 @@ const skills = [
     id: 2,
     thing: "Python3",
   },
+  {
+    id: 3,
+    thing: "PSQL",
+  },
+  {
+    id: 4,
+    thing: "MySQL",
+  },
+  {
+    id: 5,
+    thing: "HTML",
+  },
+  {
+    id: 6,
+    thing: "Bootsrap",
+  },
+  {
+    id: 7,
+    thing: "React-js",
+  },
+  {
+    id: 8,
+    thing: "Matplotlib",
+  },
 ];
 
 const courses = [
@@ -64,18 +88,16 @@ const projects = [
 function Main() {
   return (
     <section className="intro">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid d-flex justify-content-center">
-          Manjeet Kapil
-        </div>
-      </nav>
+      <div class="container border d-flex justify-content-center h1 border-success">
+        Welcome
+      </div>
       <div className="container border border-success rounded my-2">
-        <h1>MANJEET KAPIL</h1>
-        <h1>IIT Dharwad Email:180010021@iitdh.ac.in</h1>
-        <h2>
+        <div className="row h3 mx-1 my-1">Manjeet Kapil</div>
+        <div className="row h3 mx-1 my-1">Email:180010021@iitdh.ac.in</div>
+        <div className="row h3 mx-1 my-1">
           Love solving real world problems and want to learn more DSA is fun to
           solve.
-        </h2>
+        </div>
       </div>
       <div className="container border border-success rounded my-2">
         <div className="row">
@@ -96,10 +118,12 @@ function Main() {
         </div>
       </div>
       <div className="container border border-success rounded my-2">
-        <div className="col d-flex justify-content-center h2">SKILLS</div>
-        {skills.map((skill) => {
-          return <Skill key={skill.id} skill={skill} />;
-        })}
+        <div className="row d-flex justify-content-center h2">SKILLS</div>
+        <div className="row">
+          {skills.map((skill) => {
+            return <Skill key={skill.id} skill={skill} />;
+          })}
+        </div>
       </div>
       <div className="container border border-success rounded my-2">
         <div className="col d-flex justify-content-center h2">COURSEWORK</div>
@@ -125,11 +149,11 @@ function Main() {
 
 const Skill = (props) => {
   const { thing } = props.skill;
-  return <div className="row h3">{thing}</div>;
+  return <div className="col-4 h3 d-flex justify-content-center">{thing}</div>;
 };
 const Coursework = (props) => {
   const { coursename } = props.work;
-  return <div className="row h3">{coursename}</div>;
+  return <div className="row h3 mx-1">{coursename}</div>;
 };
 const Experience = (props) => {
   const { name, link, description } = props.exp;
@@ -138,7 +162,7 @@ const Experience = (props) => {
       <a className="col-12" href={link}>
         {name}
       </a>
-      <div className="col h5">{description}</div>
+      <div className="col h5 my-1">{description}</div>
     </div>
   );
 };
@@ -149,7 +173,7 @@ const Project = (props) => {
       <a className="col-12" href={link}>
         {name}
       </a>
-      <div className="col h5">{description}</div>
+      <div className="col h5 my-1">{description}</div>
     </div>
   );
 };
