@@ -91,6 +91,19 @@ function Main() {
       <div class="container border d-flex justify-content-center h1 border-success">
         Welcome
       </div>
+      <div className="container border d-flex justify-content-center border-success">
+        <div className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://source.unsplash.com/1100x600/?tech,laptop,nature"
+                className="img-fluid"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container border border-success rounded my-2">
         <div className="row h3 mx-1 my-1">Manjeet Kapil</div>
         <div className="row h3 mx-1 my-1">Email:180010021@iitdh.ac.in</div>
